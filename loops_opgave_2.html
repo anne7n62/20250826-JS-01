@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Opgave 2: Skudår</h1>
+
+    <script>
+      // modulus giver resten af en division
+      // Reglerne for skudår:
+      // Hvis et år ikke kan deles med 4 → det er ikke et skudår.
+      // Hvis det kan deles med 400 → det er et skudår.
+      // Hvis det kan deles med 100 (men ikke 400) → det er ikke et skudår.
+      // Ellers → det er et skudår.
+
+      let år = Number(prompt("Skriv et årstal"));
+      if (år % 4 !== 0) console.log("Dette er ikke et skudår");
+      else if (år % 400 === 0) console.log("Dette er et skudår");
+      else if (år % 100 === 0) console.log("Dette er ikke et skudår");
+      else console.log("Dette er et skudår");
+    </script>
+  </body>
+</html>

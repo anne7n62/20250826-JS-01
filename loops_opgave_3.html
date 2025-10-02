@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Opgave 3: Sammelign</h1>
+    <input id="inputA" type="text" placeholder="Tal A"></input>
+    <input id="inputB" type="text" placeholder="Tal B"></input>
+    <button id="click">Click</button>
+
+
+    <script>
+      "use strict"
+
+      document.getElementById("click").addEventListener("click", function () {
+
+      let a = document.getElementById("inputA").value;
+      let b = document.getElementById("inputB").value;
+
+      if (a > b) {
+        console.log("a er større end b");
+      } else if (a < b) {
+        console.log("a er mindre end b");
+      } else if (a === b) {
+        console.log("a er lig med b");
+      }
+    });
+
+    </script>
+  </body>
+</html>

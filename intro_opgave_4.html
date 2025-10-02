@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Opgave 4: Hilsen</h1>
+
+    <p>Skriv dit navn</p>
+    <input type="text" id="fornavn" placeholder="Dit fornavn" />
+    <input type="text" id="efternavn" placeholder="Dit efternavn" />
+    <button id="tjek">Tjek</button>
+
+    <p id="hilsen"></p>
+
+    <script>
+      document.getElementById("tjek").addEventListener("click", function () {
+        // hent værdi fra inputfelter
+        let fornavn = document.getElementById("fornavn").value;
+        let efternavn = document.getElementById("efternavn").value;
+        let hilsen = document.getElementById("hilsen");
+
+        hilsen.textContent = "Hej" + " " + fornavn + " " + efternavn;
+
+        console.log("Hej" + " " + fornavn + " " + efternavn);
+      });
+    </script>
+  </body>
+</html>

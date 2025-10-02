@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  <input id="inputA" type="number"></input>
+  <input id="inputB" type="number"></input>
+
+
+    <script>
+      let m = Number(prompt("indtast starttallet (m):"));
+      let n = Number(prompt("indtast sluttallet (n):"));
+      let sum = 0;
+
+      for(let i=m; i<=n; i++) {
+        if (i % 7 === 0) {
+          continue; //spring tal der er delellige me 7 over
+        }
+        console.log(i); sum += i;
+  	  };
+
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Opgave 1: billetpris med ternary</h1>
+    <p>
+      En billet for børn under 18 år koster 5 kr. og for voksne over 18 år
+      koster det 20 kr.
+    </p>
+
+    <p>Hvor gammel er du?</p>
+    <input type="text" id="alder" placeholder="skriv din alder" />
+    <button id="tjek">Tjek billetpris</button>
+
+    <p id="pris"></p>
+
+    <script>
+      document.getElementById("tjek").addEventListener("click", function () {
+        // hent værdi fra inputfeltet
+        let alder = Number(document.getElementById("alder").value);
+        //let dinPris = document.getElementById("pris");
+
+        console.log("alder input:", alder);
+
+        // tjek pris - string indsættes i #pris
+        if (alder <= 18) {
+          document.getElementById("pris").textContent = "Billetten koster 5 kr";
+        } else if (alder > 18) {
+          document.getElementById("pris").textContent =
+            "Billetten koster 20 kr";
+        } else if (isNaN(alder)) {
+          document.getElementById("pris").textContent =
+            "Skriv en gyldig alder (tal)";
+        }
+      });
+    </script>
+  </body>
+</html>

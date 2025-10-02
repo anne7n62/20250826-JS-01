@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opgave 3</title>
+  </head>
+
+  <body>
+    <script>
+      //Brugeren får prompt box, hvor de kan skrive et tal. Alt, der skrives i et prompt kommer ud som en string. fx 5 bliver til "5"
+      let a = prompt("Skriv tal A");
+      let b = prompt("Skriv tal B");
+
+      //let t prøver at lave strengen om til et tal med Number()
+      //Herefter tjekker vi om det resultatet IKKE er et tal
+      //Så hvis brugeren skriver et tal, så opdater a til et tal
+      //Hvis det ikker er et tal, så forbliver det en streng
+      let t = Number(a);
+      if (!isNaN(t)) a = t;
+
+      t = Number(b);
+      if (!isNaN(t)) b = t;
+
+      //typeof fortæller typen (om det er number eller string)
+      //Hvis a og b ikke har samme type kan de ikke sammenlignes
+      //Hvis typerne er ens, sammenlignes værdierne - man kan også godt sammenligne bogstaver
+      if (typeof a !== typeof b) console.log("A og B er usammenlignelige");
+      else if (a > b) console.log("A er større end B");
+      else if (a < b) console.log("B er større A");
+      else console.log("A er lig med B");
+    </script>
+  </body>
+</html>

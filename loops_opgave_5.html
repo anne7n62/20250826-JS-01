@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>For loop</h2>
+
+    <script>
+      let m = Number(prompt("Skriv starttallet"));
+      let n = Number(prompt("Skriv sluttallet"));
+      let sum = 0;
+
+      for (let i = m; i <= n; ++i) sum += i;
+      console.log("Summen af tal fra og med", m, "til og med", n, "er", sum);
+
+      let i = 1;
+      while (i <= 10) console.log("Nummeret er " + i++);
+    </script>
+  </body>
+</html>

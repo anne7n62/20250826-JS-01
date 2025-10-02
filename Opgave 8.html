@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //få tal fra brugeren
+      let n = Number(prompt("Hvor mange gange vil du kaste terningen?"));
+
+      //initialisere siderne på terningen, der skal tælles
+      let en = 0,
+        to = 0,
+        tre = 0,
+        fire = 0,
+        fem = 0,
+        seks = 0;
+
+      for (let i = 1; i <= n; ++i) {
+        //generer et tal fra 1-6
+        let x = Math.floor(Math.random() * 6) + 1;
+
+        //lander på den side (tal) der kommer frem - breaker derefter ud a løkken og starter igen
+        //indtil for loopen er afsluttet
+        switch (x) {
+          case 1:
+            ++en;
+            break;
+          case 2:
+            ++to;
+            break;
+          case 3:
+            ++tre;
+            break;
+          case 4:
+            ++fire;
+            break;
+          case 5:
+            ++fem;
+            break;
+          case 6:
+            ++seks;
+            break;
+        }
+      }
+
+      //viser her værdierne af variablerne,
+      //som jo er blevet opdateret alt efter hvilken side math.random er landet på
+      console.log("1 er slået", en + " gange");
+      console.log(to);
+      console.log(tre);
+      console.log(fire);
+      console.log(fem);
+      console.log(seks);
+    </script>
+  </body>
+</html>

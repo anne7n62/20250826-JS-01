@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>For loop med continue</h2>
+
+    <script>
+      let m = Number(prompt("Skriv starttallet"));
+      let n = Number(prompt("Skriv sluttallet"));
+      let sum = 0;
+      for (let i = m; i <= n; ++i) {
+        if (i % 7 === 0) continue;
+        sum += i;
+      }
+      console.log(
+        "Summen af tal fra og med",
+        m,
+        "til og med",
+        n,
+        "undtagen de tal der kan deles med 7, er",
+        sum
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Opgave 2: Differens</h1>
+
+    <p>Skriv to tal</p>
+    <input type="text" id="tal1" placeholder="Tal 1" />
+    <input type="text" id="tal2" placeholder="Tal 2" />
+    <button id="tjek">Tjek differensen</button>
+
+    <script>
+      document.getElementById("tjek").addEventListener("click", function () {
+        // hent værdi fra inputfelter
+        let tal1 = Number(document.getElementById("tal1").value);
+        let tal2 = Number(document.getElementById("tal2").value);
+
+        //Tal1 større end Tal2 lav udregning
+        if (tal1 > tal2) {
+          resultat = tal1 - tal2;
+          console.log("1 Differencen er:", resultat);
+        }
+        //Tal2 større end tal 1 lav udregning
+        else if (tal1 < tal2) {
+          resultat = tal2 - tal1;
+          console.log("2 Differencen er:", resultat);
+        } else if (tal1 === tal2) {
+          console.log("3 Der er ingen difference");
+        }
+      });
+    </script>
+  </body>
+</html>
