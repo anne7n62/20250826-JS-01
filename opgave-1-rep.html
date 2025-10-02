@@ -11,9 +11,8 @@ Output billetprisen baseret på brugerens inputtede alder. Brug ternary ? -->
   </head>
   <body>
     <script>
-      let alder = prompt("skriv din alder");
-
-      alder < 18
+      let alder = Number(prompt("Skriv din alder"));
+      alder <= 18
         ? prompt("Din billetpris er 5 kr")
         : prompt("Din billetpris er 20 kr");
     </script>
